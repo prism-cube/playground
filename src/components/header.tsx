@@ -28,18 +28,16 @@ export default function Header() {
         align={'center'}
       >
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          
-        <Link href="/" passHref>
-        <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}
-            as="a"
-          >
-            Playground.PrismCube
-          </Text>
-        </Link>
-          
+          <Link href="/" passHref>
+            <Text
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              fontFamily={'heading'}
+              color={useColorModeValue('gray.800', 'white')}
+              as="a"
+            >
+              Playground.PrismCube
+            </Text>
+          </Link>
         </Flex>
 
         <Stack

@@ -1,13 +1,20 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
-import { Box, chakra, Button, Avatar, Stack, HStack, Heading } from '@chakra-ui/react'
+import {
+  Box,
+  chakra,
+  Button,
+  Avatar,
+  Stack,
+  HStack,
+  Heading,
+} from '@chakra-ui/react'
 import { Layout } from 'src/components/layout'
 
 const Home: NextPage = () => {
   return (
     <Layout>
-
       <Box>
         <chakra.h1 color="tomato">Hello World!</chakra.h1>
         <chakra.h2>こんにちは！</chakra.h2>
@@ -38,7 +45,6 @@ const Home: NextPage = () => {
           </Stack>
         </HStack>
       </Stack>
-
     </Layout>
   )
 }
