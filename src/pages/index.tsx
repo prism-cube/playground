@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Box>
 
       <Stack>
-        <Link href="/predictions/j1-2022" passHref>
+        <Link href="/predictions/j1-2022">
           <a>J1 2022 順位予想</a>
         </Link>
       </Stack>

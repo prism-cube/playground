@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   Box,
   Flex,
@@ -27,13 +28,18 @@ export default function Header() {
         align={'center'}
       >
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
+          
+        <Link href="/" passHref>
+        <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
+            as="a"
           >
             Playground.PrismCube
           </Text>
+        </Link>
+          
         </Flex>
 
         <Stack

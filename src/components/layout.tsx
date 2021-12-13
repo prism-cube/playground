@@ -12,9 +12,7 @@ export function Layout({ children }: Props) {
     <>
       <Header />
 
-      <Container maxW="container.lg">
-        <main>{children}</main>
-      </Container>
+      <main>{children}</main>
 
       <Footer />
     </>
