@@ -825,6 +825,19 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@mndzielski/react-smooth-dnd@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@mndzielski/react-smooth-dnd/-/react-smooth-dnd-0.11.2.tgz#d3820ac6cd2987a8a90b83c09ff90a57f6c36ed2"
+  integrity sha512-X1NnKGoBplZiC9NCuY/4XSIrYadoskVosnKmyiyIEarTO+6/LVFpnbQkllCx8W7q+a1aGVgicdiMUiTKPkzLgw==
+  dependencies:
+    "@mndzielski/smooth-dnd" "0.12.1"
+    prop-types ">=15.6.0"
+
+"@mndzielski/smooth-dnd@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@mndzielski/smooth-dnd/-/smooth-dnd-0.12.1.tgz#11c589f66b50f1158c7424c3735150ec76f15ccf"
+  integrity sha512-PWvlR9GgTWqhXn9Z/IijTfI7pN8JCSXEAO1CuH36nIl65VlW5JrAafxYgjeQ6W0O2CvDbLTrzsHvzAgVSg0/DQ==
+
 "@napi-rs/triples@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"
@@ -981,13 +994,6 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
-
-"@types/array-move@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/array-move/-/array-move-2.0.0.tgz#cc5eddfce1d5f161d084c41e718b416113f14502"
-  integrity sha512-M1Sb7db3XP65S2j5CWvzce2z0ORRfT/Bhd6mYu++nP6ZhRsntMixavFyxgf9NkQa37bveuIfpb0RKYRA8XVcGQ==
-  dependencies:
-    array-move "*"
 
 "@types/json5@^0.0.29":
   version "0.0.29"
@@ -1176,11 +1182,6 @@ array-includes@^3.1.3, array-includes@^3.1.4:
     es-abstract "^1.19.1"
     get-intrinsic "^1.1.1"
     is-string "^1.0.7"
-
-array-move@*, array-move@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/array-move/-/array-move-4.0.0.tgz#2c3730f056cc926f62a59769a5a8cda2fb6d8c55"
-  integrity sha512-+RY54S8OuVvg94THpneQvFRmqWdAHeqtMzgMW6JNurHxe8rsS07cHQdfGkXnTUXiBcyZ0j3SiDIxxj0RPiqCkQ==
 
 array-union@^2.1.0:
   version "2.1.0"
@@ -3365,14 +3366,6 @@ react-remove-scroll@2.4.1:
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
 
-react-smooth-dnd@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/react-smooth-dnd/-/react-smooth-dnd-0.11.1.tgz#8d976137854c95f8fc09aa1ebc3069f69ceed6fa"
-  integrity sha512-+lVWQwPlK980VbFLtMSKfAJBt5ep37H/rVm3OnFiTpMFAghB9YQmrj3MnoIZ8tF+/niM/FFLpnSo8IgnbEY4Kg==
-  dependencies:
-    prop-types ">=15.6.0"
-    smooth-dnd "0.12.1"
-
 react-style-singleton@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-style-singleton/-/react-style-singleton-2.1.1.tgz#ce7f90b67618be2b6b94902a30aaea152ce52e66"
@@ -3567,11 +3560,6 @@ slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
-
-smooth-dnd@0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/smooth-dnd/-/smooth-dnd-0.12.1.tgz#cdb44c972355659e32770368b29b6a80e0ed96f1"
-  integrity sha512-Dndj/MOG7VP83mvzfGCLGzV2HuK1lWachMtWl/Iuk6zV7noDycIBnflwaPuDzoaapEl3Pc4+ybJArkkx9sxPZg==
 
 source-map@0.7.3:
   version "0.7.3"

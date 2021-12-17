@@ -16,47 +16,55 @@ import {
   Badge,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Container as ContainerDnd, Draggable, DropResult } from 'react-smooth-dnd'
-import { Layout } from 'src/components/layout'
-import { ArrayMoveImmutable } from 'src/utils/array-move'
+import {
+  Container as ContainerDnd,
+  Draggable,
+  DropResult,
+} from '@mndzielski/react-smooth-dnd'
+import { Layout } from '@/components/layout'
+import { ArrayMoveImmutable } from '@/utils/array-move'
 
 const J1_2022: NextPage = () => {
   const [items, setItems] = useState(teams)
 
   const onDrop = (dropResult: DropResult) => {
-    const { removedIndex, addedIndex } = dropResult;
+    const { removedIndex, addedIndex } = dropResult
     const updater = (itemsArray: Team[]) =>
-      ArrayMoveImmutable(itemsArray, removedIndex, addedIndex).map((item: Team, idx: number) => {
-        return { ...item, order: idx };
-      });
-    setItems(updater);
-  };
+      ArrayMoveImmutable(itemsArray, removedIndex, addedIndex).map(
+        (item: Team, idx: number) => {
+          return { ...item, order: idx }
+        }
+      )
+    setItems(updater)
+  }
 
   return (
     <Layout>
       <Container maxW="container.lg">
         <Heading p={3}>J1 順位予想メーカー 2022</Heading>
         <Center p={1}>
-            <VStack>
-              <ContainerDnd onDrop={onDrop}>
-                {items.map((team: Team) => (
-                  <Draggable key={team.id}>
-                    <HStack w="100%" p={2} cursor="grab">
-                      {team.order + 1 === 1 || team.order + 1 === 2
-                         ? <Badge colorScheme='orange'>{team.order + 1}</Badge>
-                         : team.order + 1 === items.length || team.order + 1 === items.length - 1
-                         ? <Badge colorScheme='white'>{team.order + 1}</Badge>
-                         : <Badge>{team.order + 1}</Badge>
-                      }
-                      <Spacer />
-                      <Box>{team.name}</Box>
-                      <Spacer />
-                      <HamburgerIcon />
-                    </HStack>
-                  </Draggable>
-                ))}
-              </ContainerDnd>
-            </VStack>
+          <VStack>
+            <ContainerDnd onDrop={onDrop}>
+              {items.map((team: Team) => (
+                <Draggable key={team.id}>
+                  <HStack w="100%" p={2} cursor="grab">
+                    {team.order + 1 === 1 || team.order + 1 === 2 ? (
+                      <Badge colorScheme="orange">{team.order + 1}</Badge>
+                    ) : team.order + 1 === items.length ||
+                      team.order + 1 === items.length - 1 ? (
+                      <Badge colorScheme="white">{team.order + 1}</Badge>
+                    ) : (
+                      <Badge>{team.order + 1}</Badge>
+                    )}
+                    <Spacer />
+                    <Box>{team.name}</Box>
+                    <Spacer />
+                    <HamburgerIcon />
+                  </HStack>
+                </Draggable>
+              ))}
+            </ContainerDnd>
+          </VStack>
         </Center>
       </Container>
     </Layout>
