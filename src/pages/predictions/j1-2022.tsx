@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import {
   Box,
@@ -22,7 +23,16 @@ import {
   DropResult,
 } from '@mndzielski/react-smooth-dnd'
 import { Layout } from '@/components/layout'
+import { Meta } from '@/types/meta'
+import { Team } from '@/types/predictions'
 import { ArrayMoveImmutable } from '@/utils/array-move'
+
+const meta: Meta = {
+  title: `J1 順位予想メーカー 2022 - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+  description: '',
+  url: `${process.env.NEXT_PUBLIC_URL}/predictions/j1-2022`,
+  ogp: `${process.env.NEXT_PUBLIC_URL}/api/ogp/predictions`,
+}
 
 const J1_2022: NextPage = () => {
   const [items, setItems] = useState(teams)
@@ -40,6 +50,15 @@ const J1_2022: NextPage = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:url" content={meta.url} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.ogp} />
+      </Head>
+
       <Container maxW="container.lg">
         <Heading p={3}>J1 順位予想メーカー 2022</Heading>
         <Center p={1}>
@@ -93,9 +112,3 @@ const teams: Team[] = [
   { id: 17, name: 'ジュビロ磐田', order: 16 },
   { id: 18, name: '京都サンガF.C.', order: 17 },
 ]
-
-interface Team {
-  id: number
-  name: string
-  order: number
-}
