@@ -1,31 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import {
-  Box,
-  chakra,
   Container,
-  Button,
   Center,
-  Stack,
-  HStack,
   Heading,
-  VStack,
-  Spacer,
-  Flex,
-  Badge,
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-import {
-  Container as ContainerDnd,
-  Draggable,
-  DropResult,
-} from '@mndzielski/react-smooth-dnd'
 import { Layout } from '@/components/layout'
+import TeamList from '@/components/predictions/team-list'
 import { Meta } from '@/types/meta'
 import { Team } from '@/types/predictions'
-import { ArrayMoveImmutable } from '@/utils/array-move'
 
 const meta: Meta = {
   title: `J1 順位予想メーカー 2022 - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -35,19 +19,6 @@ const meta: Meta = {
 }
 
 const J1_2022: NextPage = () => {
-  const [items, setItems] = useState(teams)
-
-  const onDrop = (dropResult: DropResult) => {
-    const { removedIndex, addedIndex } = dropResult
-    const updater = (itemsArray: Team[]) =>
-      ArrayMoveImmutable(itemsArray, removedIndex, addedIndex).map(
-        (item: Team, idx: number) => {
-          return { ...item, order: idx }
-        }
-      )
-    setItems(updater)
-  }
-
   return (
     <Layout>
       <Head>
@@ -62,28 +33,7 @@ const J1_2022: NextPage = () => {
       <Container maxW="container.lg">
         <Heading p={3}>J1 順位予想メーカー 2022</Heading>
         <Center p={1}>
-          <VStack>
-            <ContainerDnd onDrop={onDrop}>
-              {items.map((team: Team) => (
-                <Draggable key={team.id}>
-                  <HStack w="100%" p={2} cursor="grab">
-                    {team.order + 1 === 1 || team.order + 1 === 2 ? (
-                      <Badge colorScheme="orange">{team.order + 1}</Badge>
-                    ) : team.order + 1 === items.length ||
-                      team.order + 1 === items.length - 1 ? (
-                      <Badge colorScheme="white">{team.order + 1}</Badge>
-                    ) : (
-                      <Badge>{team.order + 1}</Badge>
-                    )}
-                    <Spacer />
-                    <Box>{team.name}</Box>
-                    <Spacer />
-                    <HamburgerIcon />
-                  </HStack>
-                </Draggable>
-              ))}
-            </ContainerDnd>
-          </VStack>
+          <TeamList teams={teams} />
         </Center>
       </Container>
     </Layout>
