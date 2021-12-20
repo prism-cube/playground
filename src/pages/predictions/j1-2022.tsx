@@ -1,11 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import {
-  Container,
-  Center,
-  Heading,
-} from '@chakra-ui/react'
+import { Container, Center, Heading } from '@chakra-ui/react'
 import { Layout } from '@/components/layout'
 import TeamList from '@/components/predictions/team-list'
 import { Meta } from '@/types/meta'
@@ -52,7 +48,7 @@ const teams: Team[] = [
   { id: 7, name: 'サガン鳥栖', order: 6 },
   { id: 8, name: 'アビスパ福岡', order: 7 },
   { id: 9, name: 'FC東京', order: 8 },
-  { id: 10, name: 'コンサドーレ札幌', order: 9 },
+  { id: 10, name: '北海道コンサドーレ札幌', order: 9 },
   { id: 11, name: 'サンフレッチェ広島', order: 10 },
   { id: 12, name: 'セレッソ大阪', order: 11 },
   { id: 13, name: 'ガンバ大阪', order: 12 },
