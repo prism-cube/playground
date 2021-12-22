@@ -15,6 +15,7 @@ const MyDocument = () => {
           name="format-detection"
           content="telephone=no,email=no,address=no"
         />
+        <meta name="google-site-verification" content="jefF9xTvBbtoEWgehqWi5V5foWJNEuISsZgSu2CebFA" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <body>
