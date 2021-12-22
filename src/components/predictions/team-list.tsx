@@ -31,7 +31,9 @@ const TeamList = (props: Props) => {
                 <Badge>{team.order + 1}</Badge>
               )}
               <Spacer />
-              <Box minW="12rem" textAlign="center">{team.name}</Box>
+              <Box minW="12rem" textAlign="center">
+                {team.name}
+              </Box>
               <Spacer />
               <HamburgerIcon />
             </HStack>
