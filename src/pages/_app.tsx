@@ -25,9 +25,11 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   return (
     <ChakraProvider theme={theme}>
-      <GoogleTagManager
+      {googleTagManagerId && (
+        <GoogleTagManager
         googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
       />
+      )}
       <Component {...pageProps} />
     </ChakraProvider>
   )
