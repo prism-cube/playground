@@ -34,7 +34,7 @@ export default function Header() {
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}
               as="a"
-              fontWeight='bold'
+              fontWeight="bold"
             >
               Playground.PrismCube
             </Text>

@@ -2,7 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
-import { Box, Button, Grid, GridItem } from '@chakra-ui/react'
+import { Box, Button, Stack } from '@chakra-ui/react'
 import { Layout } from '@/components/layout'
 import { Meta } from '@/types/meta'
 
@@ -26,19 +26,19 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <Grid templateColumns="repeat(5, 1fr)" gap={2} p={2}>
-        <GridItem>
+      <Stack p={2} align={'center'}>
+        <Box>
           <Link href="/predictions/j1-2022" passHref>
             <Button as="a">J1 2022 順位予想メーカー</Button>
           </Link>
-        </GridItem>
+        </Box>
 
-        <GridItem>
+        <Box>
           <Link href="/predictions/j2-2022" passHref>
             <Button as="a">J2 2022 順位予想メーカー</Button>
           </Link>
-        </GridItem>
-      </Grid>
+        </Box>
+      </Stack>
     </Layout>
   )
 }
