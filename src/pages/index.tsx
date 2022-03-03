@@ -2,15 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
-import {
-  Box,
-  chakra,
-  Button,
-  Avatar,
-  Stack,
-  HStack,
-  Heading,
-} from '@chakra-ui/react'
+import { Box, Button, Grid, GridItem } from '@chakra-ui/react'
 import { Layout } from '@/components/layout'
 import { Meta } from '@/types/meta'
 
@@ -34,35 +26,19 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <Box>
-        <chakra.h1 color="tomato">Hello World!</chakra.h1>
-        <Link href="https://google.com" passHref>
-          <Button as="a">Google</Button>
-        </Link>
-      </Box>
+      <Grid templateColumns="repeat(5, 1fr)" gap={2} p={2}>
+        <GridItem>
+          <Link href="/predictions/j1-2022" passHref>
+            <Button as="a">J1 2022 順位予想メーカー</Button>
+          </Link>
+        </GridItem>
 
-      <Stack>
-        <Link href="/predictions/j1-2022">
-          <a>J1 2022 順位予想</a>
-        </Link>
-      </Stack>
-
-      <Stack>
-        <HStack>
-          <Avatar />
-          <Stack>
-            <Heading size="sm">Some member</Heading>
-            <Box>こんにちは これはコメントですねん</Box>
-          </Stack>
-        </HStack>
-        <HStack>
-          <Avatar />
-          <Stack>
-            <Heading size="sm">Some member</Heading>
-            <Box>こんにちは これはコメントなのねん</Box>
-          </Stack>
-        </HStack>
-      </Stack>
+        <GridItem>
+          <Link href="/predictions/j2-2022" passHref>
+            <Button as="a">J2 2022 順位予想メーカー</Button>
+          </Link>
+        </GridItem>
+      </Grid>
     </Layout>
   )
 }
