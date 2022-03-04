@@ -1,8 +1,14 @@
-import { Box, Container, Stack, Text } from '@chakra-ui/react'
+import {
+  useColorModeValue,
+  Box,
+  Container,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 
 export default function Footer() {
   return (
-    <Box>
+    <Box bg={useColorModeValue('white', 'black')}>
       <Container
         as={Stack}
         maxW={'6xl'}
