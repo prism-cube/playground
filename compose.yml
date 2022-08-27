@@ -1,0 +1,18 @@
+services:
+  playground:
+    container_name: playground
+    # カレントディレクトリのDockerfileからコンテナイメージをビルドして使用
+    build: .
+    ports:
+      # ホストの3000ポートをコンテナの3000ポートにマッピング
+      - 3000:3000
+    volumes:
+      # node_modulesがホストのカレントディレクトリに共有されないようボリュームに切り出し
+      - node_modules:/playground/node_modules
+      # ホストのカレントディレクトリをコンテナの/playgroundにバインドマウントして共有
+      - ./:/playground:cached
+    environment:
+      # ホットリロードを有効化
+      - WATCHPACK_POLLING=true
+volumes:
+  node_modules: {}

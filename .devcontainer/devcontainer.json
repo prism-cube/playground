@@ -1,0 +1,19 @@
+{
+    "name": "playground",
+    // コンテナ起動に使用するDocker Composeファイル
+    "dockerComposeFile": "../compose.yml",
+    // Dev containerとして起動するDocker Composeサービス
+    "service": "playground",
+    // ワークスペースディレクトリ
+    "workspaceFolder": "/playground",
+    // インストールする拡張機能
+    "extensions": [
+        "ms-ceintl.vscode-language-pack-ja",
+        "dsznajder.es7-react-js-snippets",
+        "foxundermoon.next-js",
+        "pulkitgangwar.nextjs-snippets",
+        "esbenp.prettier-vscode"
+    ],
+    // コンテナ作成後にGitをインストール
+    "postCreateCommand": "apt-get update && apt-get install -y git"
+}
