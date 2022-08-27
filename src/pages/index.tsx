@@ -9,10 +9,13 @@ const Home: NextPage = () => {
     <Layout>
       <Head />
       <Container centerContent>
-        <VStack spacing={12} w="n100%">
+        <VStack spacing={12} w="100%">
           <Heading pt={4}>Hello, World!</Heading>
-          <NextLink href="/" passHref>
-            <Link>リンク</Link>
+          <NextLink href="/memo" passHref>
+            <Link>メモ</Link>
+          </NextLink>
+          <NextLink href="/probability" passHref>
+            <Link>確率シミュレーター</Link>
           </NextLink>
         </VStack>
       </Container>

@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logo href="/">{config.SITE_NAME}</Logo>
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
+      {/*<MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuItems isOpen={isOpen}>
         <MenuLink href="/">リンク</MenuLink>
-      </MenuItems>
+      </MenuItems>*/}
     </HeaderContainer>
   )
 }
