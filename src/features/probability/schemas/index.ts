@@ -7,8 +7,6 @@ export const probabilityCalcSchema = schemaForType<ProbabilityCalc>()(
   z.object({
     numerator: z.number().min(1, validationMessages.required('分子')),
     denominator: z.number().min(1, validationMessages.required('分母')),
-    frequency: z
-      .number()
-      .min(1, validationMessages.required('確率を満たす回数')),
+    frequency: z.number().min(1, validationMessages.required('確率を引く回数')),
   })
 )

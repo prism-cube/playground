@@ -11,6 +11,10 @@ export default function Document() {
           name="format-detection"
           content="telephone=no,email=no,address=no"
         />
+        <meta
+          name="google-site-verification"
+          content="jefF9xTvBbtoEWgehqWi5V5foWJNEuISsZgSu2CebFA"
+        />
       </Head>
       <body>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />

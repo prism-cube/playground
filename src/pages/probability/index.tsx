@@ -77,7 +77,7 @@ const Page: NextPage = () => {
             />
             <FormInputNumber<ProbabilityCalc>
               name="frequency"
-              label="確率を満たす回数"
+              label="確率を引く回数"
               fieldError={methods.formState.errors.frequency}
             />
             <Button
