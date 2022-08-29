@@ -11,23 +11,13 @@ import {
 } from '@chakra-ui/react'
 import { BiSave, BiTrash } from 'react-icons/bi'
 import { MdAdd } from 'react-icons/md'
-import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '@/libs/dexie'
 import { Head } from '@/components/functional'
 import { Layout } from '@/components/layouts'
 import { Memo } from '@/features/memo/types'
 
 const Page: NextPage = () => {
-  const memos = useLiveQuery(() => db.memos.toArray()) || []
-  // const memos: Memo[] = []
-
-  const addMemo = async () => {
-    const id = await db.memos.add({
-      content: 'content',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    })
-  }
+  // const memos = useLiveQuery(() => db.memos.toArray()) || []
+  const memos: Memo[] = []
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -51,7 +41,6 @@ const Page: NextPage = () => {
                 colorScheme="gray"
                 aria-label="Add memo"
                 icon={<Icon as={MdAdd} w={6} h={6} color="gray.100" />}
-                onClick={addMemo}
               />
             </HStack>
             <HStack>
