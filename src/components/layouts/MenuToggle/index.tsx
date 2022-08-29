@@ -1,5 +1,6 @@
-import { Box } from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import { Box, Icon } from '@chakra-ui/react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { MdClose } from 'react-icons/md'
 
 interface Props {
   toggle: () => void
@@ -9,7 +10,11 @@ interface Props {
 const MenuToggle = ({ toggle, isOpen }: Props) => {
   return (
     <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
-      {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+      {isOpen ? (
+        <Icon as={MdClose} w={6} h={6} />
+      ) : (
+        <Icon as={GiHamburgerMenu} w={6} h={6} />
+      )}
     </Box>
   )
 }
