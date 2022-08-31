@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta
           name="format-detection"
           content="telephone=no,email=no,address=no"
